@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Meta-->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Proyek AKhir PWM">
+  <meta name="theme-color" content="#34495e" />
+  <link rel="apple-touch-icon" href="img/icon-192x192.png">
+  <!--membuat tampilan menjadi responsive-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="manifest" href="manifest.json">
+  <title>Profil</title>
+</head>
+
+<body>
+  <!--Navbar-->
+  <!--Navbar yang saya gunakan adalah navbar yang sudah ada di dokumentasi bootstrap. Hanya saja isi dari navbarnya disesuaikan dengan kebutuhan, yaitu dengan hanya menampilkan dua buah link yang berfungsi untuk berpindah antar file html.-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Hassan Fasya Hidayat</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="jadwal.html">Jadwal Shalat Bulan Ini</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--End of Navbar-->
+  <!--Bagian ini adalah bagian content yang berisikan profil singkat dan kontak media sosial.-->
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid bg-white text-center">
+      <div class="container">
+        <h1 class="display-4">Profil</h1>
+        <!--dengan menambahkan class img-fluid pada tag img, maka gambar tersebut menjadi responsive sesuai dengan settingan dari bootstrap-->
+        <img src="img/pp.jpg" class="rounded-circle img-fluid" width="200" alt="foto">
+        <p class="lead">Hassan Fasya Hidayat</p>
+        <p>Hai, nama saya Hassan Fasya Hidayat biasa dipanggil Hassan, saya berasal dari Tegal. Saya adalah
+          mahasiswa STMIK Akakom
+          Yogyakarta prodi Informatika.</p>
+        <p class="lead">Social Media</p>
+        <!--Untuk menampilkan icon, disini saya menggunakan row dan col yang merupakan bagian dari layout grid pada bootstrap. Dengan mengimplementasikan layout grid sama saja dengan mengimplementasikan media query. Pada bagian ini ketika resolusi layar lebih kecil atau lebih besar dari 576px maka hanya menampilkan 2 kolom, ketika lebih besar dari 768px maka menampilkan 3 kolom, jika lebih besar dari 992px maka menampilkan 5 kolom-->
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5">
+          <div class="col">
+            <a href="https://www.facebook.com/hassan4lyf/"><img src="img/facebook.png" alt="Facebook"
+                class="mx-2 my-2 img-fluid" width="96px" height="96px"></a>
+          </div>
+          <div class="col">
+            <a href="https://twitter.com/hassanfhidayat"><img src="img/twitter.png" alt="Twitter"
+                class="mx-2 my-2 img-fluid" width="96px" height="96px"></a>
+          </div>
+          <div class="col">
+            <a href="https://www.instagram.com/hassanfhidayat/"><img src="img/instagram.png" alt="Instagram"
+                class="mx-2 my-2 img-fluid" width="96px" height="96px"></a>
+          </div>
+          <div class="col">
+            <a href="https://wa.me/62895422852004"><img src="img/whatsapp.png" alt="WhatsApp"
+                class="mx-2 my-2 img-fluid" width="96px" height="96px"></a>
+          </div>
+          <div class="col">
+            <a href="https://t.me/hfh4lyf"><img src="img/telegram.png" alt="Telegram" class="mx-2 my-2 img-fluid"
+                width="96px" height="96px"></a>
+          </div>
+        </div>
+        <p>
+        <div>
+          Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--JS-->
+  <script src="/js/jquery-3.2.1.slim.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/sw.js"></script>
+  <script>
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register("sw.js");
+    }
+  </script>
+  <!--End of JS-->
+</body>
+
+</html>

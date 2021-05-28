@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Meta-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--membuat tampilan menjadi responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Gallery</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <!--Navbar yang saya gunakan adalah navbar yang sudah ada di dokumentasi bootstrap. Hanya saja isi dari navbarnya disesuaikan dengan kebutuhan, yaitu dengan hanya menampilkan dua buah link yang berfungsi untuk berpindah antar file html.-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Hassan Fasya Hidayat</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jadwal.html">Jadwal Shalat Bulan Ini</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--End of Navbar-->
+    <!--Bagian ini adalah bagian content yang berisikan foto - foto yang ada pada instagram saya. Pada bagian ini juga digunakan layout grid untuk mengimplementasikan media query.-->
+    <div class="container">
+        <div class="text-center mb-3 mt-2">
+            <h3>Gallery</h3>
+        </div>
+        <!--Sama seperti pada halaman awal, disini saya menggunakan row dan col atau layout grid pada bootstrap. Pada bagian ini ketika resolusi layar lebih kecil atau lebih besar dari 576px maka hanya menampilkan 2 kolom, ketika lebih besar dari 768px maka menampilkan 4 kolom, jika lebih besar dari 992px maka menampilkan 6 kolom-->
+        <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 justify-content-center">
+            <div class="col">
+                <img src="img/1.jpg" class="w-100 h-75 rounded img-fluid">
+            </div>
+            <div class="col">
+                <img src="img/2.jpg" class="w-100 h-75 rounded img-fluid">
+            </div>
+            <div class="col">
+                <img src="img/3.jpg" class="w-100 h-75 rounded img-fluid">
+            </div>
+            <div class="col">
+                <img src="img/4.jpg" class="w-100 h-75 rounded img-fluid">
+            </div>
+            <div class="col">
+                <img src="img/5.jpg" class="w-100 h-75 rounded img-fluid">
+            </div>
+            <div class="col">
+                <img src="img/6.jpg" class="w-100 h-75 rounded img-fluid">
+            </div>
+            <div class="col">
+                <img src="img/7.jpg" class="w-100 h-75 rounded img-fluid">
+            </div>
+            <div class="col">
+                <img src="img/8.jpg" class="w-100 h-75 rounded img-fluid">
+            </div>
+            <div class="col">
+                <img src="img/9.jpg" class="w-100 h-75 rounded img-fluid">
+            </div>
+            <div class="col">
+                <img src="img/10.jpg" class="w-100 h-75 rounded img-fluid">
+            </div>
+            <div class="col">
+                <img src="img/11.jpg" class="w-100 h-75 rounded img-fluid">
+            </div>
+            <div class="col">
+                <img src="img/12.jpg" class="w-100 h-75 rounded img-fluid">
+            </div>
+        </div>
+    </div>
+    <!--JS-->
+    <script src="/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/sw.js"></script>
+    <script>
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.register("sw.js");
+        }
+    </script>
+    <!--End of JS-->
+</body>
+
+</html>
